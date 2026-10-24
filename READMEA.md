@@ -47,7 +47,7 @@ Angular :4200  ──►  api-gateway :8080  ──►  auth-service         :80
 ## 2. Requisitos
 
 - **JDK 17** (`JAVA_HOME` configurado)
-- **Node.js 20 LTS** o superior (con `npm` 10+)
+- **Node.js 20 LTS** o superior (con `npm`   10+)
 - **Docker Desktop** (para MySQL, RabbitMQ y el stack opcional de observabilidad)
 
 *(No es necesario instalar Gradle globalmente; el proyecto incluye Gradle Wrapper `gradlew` / `gradlew.bat` 8.7).*
@@ -65,12 +65,12 @@ Solo base de datos y broker de mensajería:
 docker compose up -d mysql rabbitmq
 ```
 
-O incluyendo el stack completo de observabilidad (Prometheus, Grafana y ELK):
+O incluyendo el stack completo de observabilidad  (Prometheus, Grafana y ELK):
 ```bash
 docker compose up -d mysql rabbitmq elasticsearch logstash kibana prometheus grafana
 ```
 
-### 2) Backend (desde la carpeta `backend/`, un terminal por servicio y en este orden)
+### 2) Backend ( desde la carpeta `backend/`, un terminal por servicio y en este orden)
 
 En **Windows (PowerShell / CMD)**:
 ```powershell
@@ -101,19 +101,19 @@ cd backend
 ```bash
 cd frontend/inventario-web
 npm install
-npm start          # Disponible en http://localhost:4200
+npm start          # disponible en http://localhost:4200
 ```
 
 ### Usuarios y datos de prueba
 
-`auth-service` crea automáticamente al iniciar los siguientes usuarios de prueba:
+`auth-service` crea automaticamente al iniciar los siguientes usuarios de prueba:
 
 | Usuario | Contraseña | Rol |
 |---|---|---|
 | `admin` | `admin123` | `ADMIN` |
 | `vendedor` | `vendedor123` | `VENDEDOR` |
 
-El contenedor de MySQL precarga automáticamente 5 categorías, 3 proveedores y 8 productos desde `database/bodegapro.sql` en su primera ejecución.
+El Contenedor de MySQL precarga automáticamente 5 categorías, 3 proveedores y 8 productos desde `database/bodegapro.sql` en su primera ejecución.
 
 ---
 
